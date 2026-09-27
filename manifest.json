@@ -3,7 +3,6 @@
   "name": "Zhihuishu Bot",
   "version": "1.0.0",
   "description": "A browser extension for Zhihuishu course playback automation and navigation.",
-  "default_locale": "zh_CN",
   "minimum_chrome_version": "102",
   "permissions": [
     "storage",
