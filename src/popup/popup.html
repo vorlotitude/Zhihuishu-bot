@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zhihuishu Bot</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="logo">▶</span>
+      <span class="brand-name">Zhihuishu Bot</span>
+    </div>
+    <span class="version">v1.0.0</span>
+  </header>
+
+  <section class="card">
+    <div class="row">
+      <span class="row-label">自动播放</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle-autoPlay" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="row">
+      <span class="row-label">自动下一集</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle-autoNext" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="row">
+      <span class="row-label">普通弹窗处理</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle-handleNotice" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="row">
+      <span class="row-label">弹题自动作答</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle-autoAnswerQuiz" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="row sub">
+      <span class="row-label">作答策略</span>
+      <select id="select-strategy">
+        <option value="smart">智能（多选全选）</option>
+        <option value="first">只选第一项</option>
+        <option value="all">全部选中</option>
+        <option value="random">随机选一项</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="status-line">
+      <span class="status-dot" id="status-dot"></span>
+      <span class="status-text" id="status-text">正在检测…</span>
+    </div>
+    <div class="meta-line">
+      <span class="meta-key">当前课程</span>
+      <span class="meta-value" id="course-title">—</span>
+    </div>
+    <div class="hint" id="hint"></div>
+  </section>
+
+  <section class="card logs-card">
+    <div class="logs-head">
+      <span>日志</span>
+      <button id="btn-clear-logs" class="link-btn">清空</button>
+    </div>
+    <ul class="logs" id="logs"></ul>
+  </section>
+
+  <footer class="footer">
+    <p class="disclaimer">
+      仅供个人学习辅助。不会提交考试成绩、不会修改学习成绩。<br />
+      使用者需遵守学校与平台的服务条款。
+    </p>
+  </footer>
+
+  <script src="../config/selectors.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

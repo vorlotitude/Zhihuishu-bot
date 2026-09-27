@@ -1,0 +1,38 @@
+# ---- 依赖与构建产物 ----
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- 打包产物 ----
+*.zip
+*.crx
+*.pem
+*.key
+web-ext-artifacts/
+
+# ---- 隐私与凭据（绝对不要提交） ----
+.env
+.env.*
+!.env.example
+*.token
+*token*.json
+cookie*.json
+cookies.txt
+credentials.json
+secrets.json
+*.pem
+
+# ---- 操作系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+*.swp
+*~
